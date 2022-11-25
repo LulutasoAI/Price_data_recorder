@@ -28,7 +28,8 @@ class Price_data_recorder():
         return current_price, current_time
     def record_price(self):
         current_price,current_time = self.get_data()
-        print(current_time)
+        current_time_str= self.datetime_wrapper.datetime_to_str(current_time)
+        print(current_time_str)
         
     def start_recording(self):
         self.get_latest_price()
